@@ -1,0 +1,23 @@
+{
+  "preset": "ts-jest",
+  "testEnvironment": "node",
+  "roots": ["<rootDir>/src"],
+  "testMatch": ["**/__tests__/**/*.ts", "**/*.test.ts"],
+  "moduleNameMapper": {
+    "@plus-minus/shared": "<rootDir>/../shared/src/index.ts"
+  },
+  "globals": {
+    "ts-jest": {
+      "tsconfig": {
+        "paths": {
+          "@plus-minus/shared": ["../shared/src/index.ts"]
+        }
+      }
+    }
+  },
+  "collectCoverageFrom": [
+    "src/**/*.ts",
+    "!src/**/*.d.ts",
+    "!src/index.ts"
+  ]
+}
